@@ -21,7 +21,12 @@ public class Store {
 		listProduct.add(new Accessories("Samsung", "A1", 9990));
 	}
 	
-	public String getProductByCategory(String category) {
-		
+	public String getCatalogue(String type) {
+		String res = "";
+		for(Product m:listProduct) {
+			if(m.getClass().getName().equals(type));
+			res = res+m.formatCourt+"\n";
+			return res;
+		}
 	}
 }
